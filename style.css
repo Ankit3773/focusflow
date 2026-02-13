@@ -1,0 +1,318 @@
+/* ===============================
+   GLOBAL RESET
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00f2fe;
+}
+
+/* ===============================
+   DASHBOARD
+================================= */
+.dashboard {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.dashboard h1 {
+  margin-bottom: 50px;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 270px;
+  padding: 35px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  transition: 0.4s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00f2fe;
+}
+
+/* ===============================
+   TASK PAGE
+================================= */
+.tasks-page {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.tasks-page h1 {
+  margin-bottom: 35px;
+  font-size: 2.4rem;
+}
+
+/* Input Section */
+.task-input {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.task-input input,
+.task-input select {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 14px;
+}
+
+.task-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+button {
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.4);
+}
+
+/* Filters */
+.filters {
+  margin-bottom: 30px;
+}
+
+.filters button {
+  margin: 6px;
+}
+
+/* ===============================
+   TASK LIST PREMIUM
+================================= */
+#taskList {
+  list-style: none;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+#taskList li {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#taskList li:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+#taskList li span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Task Buttons */
+#taskList li div {
+  display: flex;
+  gap: 12px;
+}
+
+#taskList li button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#taskList li button:hover {
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+}
+
+/* Priority Indicators */
+.low {
+  border-left: 5px solid #2ecc71;
+}
+
+.medium {
+  border-left: 5px solid #f1c40f;
+}
+
+.high {
+  border-left: 5px solid #e74c3c;
+}
+
+/* ===============================
+   TIMER PAGE
+================================= */
+.timer-page {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.timer-page h1 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.timer {
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin: 50px 0;
+  color: #00f2fe;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+.timer-buttons button {
+  margin: 10px;
+}
+
+/* Custom Time Input */
+.custom-time {
+  margin-bottom: 25px;
+}
+
+.custom-time input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 170px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+/* Adjust Buttons */
+.adjust-buttons {
+  margin-top: 25px;
+}
+
+.adjust-buttons button {
+  margin: 8px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #taskList li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  #taskList li div {
+    align-self: flex-end;
+  }
+}
+/* ===============================
+   TASK ENTRY ANIMATION
+================================= */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-animate {
+  animation: slideIn 0.4s ease forwards;
+}

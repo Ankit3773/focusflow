@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FocusFlow - Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2>FocusFlow</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="timer.html">Timer</a>
+    </div>
+  </nav>
+
+  <section class="timer-page">
+    <h1>Pomodoro Timer</h1>
+
+    <div class="custom-time">
+      <input type="number" id="customMinutes" placeholder="Enter minutes" min="1">
+      <button onclick="setCustomTime()">Set Time</button>
+    </div>
+
+    <div class="timer">
+      <p id="time">00:00</p>
+    </div>
+<div class="timer-buttons">
+  <button onclick="startTimer()">Start</button>
+  <button onclick="pauseTimer()">Pause</button>
+  <button onclick="resetTimer()">Reset</button>
+</div>
+
+<div class="adjust-buttons">
+  <button onclick="addTime(60)">+1 Min</button>
+  <button onclick="addTime(300)">+5 Min</button>
+  <button onclick="addTime(-60)">-1 Min</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
